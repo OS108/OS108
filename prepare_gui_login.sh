@@ -2,8 +2,8 @@
 #
 # Install SLIM from wip pkgsrc and install theme for OS108
 #
-cd /usr/pkgsrc/x11/slim/
-make install
+cd /usr/pkgsrc/x11/slim/ && make install
+#make install
 cp /usr/pkg/share/examples/rc.d/slim /etc/rc.d
 cd ~
 test -f .xinitrc || touch .xinitrc 
