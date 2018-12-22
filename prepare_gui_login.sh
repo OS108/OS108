@@ -20,4 +20,5 @@ curl -O https://github.com/OS108/OS108/raw/master/os108-slim-theme-default/os108
 curl -O https://github.com/OS108/OS108/raw/master/os108-slim-theme-default/os108-default/slim.theme
 rm /usr/pkg/share/slim/themes/default/*
 cp /home/OS108/* /usr/pkg/share/themes/default/
+echo slim=YES >> /etc/rc.conf
 echo Done!
