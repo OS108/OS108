@@ -2,12 +2,13 @@
 #
 # Install MATE Desktop & SLIM from wip pkgsrc and install theme for OS108
 #
+HOMEDIR=${HOME}
 echo ALLOW_VULNERABLE_PACKAGES=yes >> /usr/pkgsrc/mk/defaults/mk.conf
 cd /usr/pkgsrc/x11/slim/ && make install
 cp /usr/pkg/share/examples/rc.d/slim /etc/rc.d
-cd $HOME && test -f .xinitrc || touch .xinitrc
+cd ${HOMEDIR} && test -f .xinitrc || touch .xinitrc
 echo mate-session >> $HOME/.xinitrc
-cd $HOME && ln .xinitrc .xsession
+cd ${HOMEDIR} && ln .xinitrc .xsession
 mkdir /home/OS108
 cd /home/OS108
 curl -LO https://github.com/OS108/OS108/raw/master/os108-slim-theme-default/os108-default/background.jpg
