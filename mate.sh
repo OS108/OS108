@@ -34,7 +34,7 @@ cp /usr/pkg/share/examples/rc.d/slim /etc/rc.d
 visudo -c -q -f /cdrom/amd64/binary/sets/pkgs/mysudo && cp /cdrom/amd64/binary/sets/pkgs/mysudo /usr/pkg/etc/sudoers.d && chmod 600 /usr/pkg/etc/sudoers.d/mysudo
 groupinfo wheel >> /root/users.list
 sed -n '/^members[[:blank:]]*/{ s///; s/,[[:blank:]]/,/g; y/,/\n/; p; }' /root/users.list >> /root/final.list
-USERS=`cat $PWD/final.list`
+USERS=`cat /root/final.list`
 for user in ${USERS}; do
 
 	if [ ${user} = root ] ; then
