@@ -81,6 +81,7 @@ rm /root/users.list
 rm /root/final.list
 rm /root/pkgin-0.11.6.tgz
 rm /root/pkg_install-20180425.tgz
+sysctl -w kern.defcorename=/tmp/%n.core
 compton \
         --config /dev/null \
         --backend glx \
