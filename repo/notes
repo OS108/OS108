@@ -1,6 +1,7 @@
 dbus-launch dconf load / < dconf.out
 sudo su -l try -c "dbus-launch dconf load / < /home/try/dconf.dump.out"
 /usr/pkg/lib/firefox/browser/defaults/preferences
+gsettings set org.mate.Marco.global-keybindings panel-main-menu 'Super_L'
 
 qemu-system-x86_64 -m 1024 -netdev user,id=mynet0,hostfwd=tcp:127.0.0.1:7722-:22 -device e1000,netdev=mynet0 -hda /home/jay/hdd.img -cdrom /home/jay/OS108/OS108-9.0-amd64.iso
 
